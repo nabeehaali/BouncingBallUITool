@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UXML/BallStyle.uss?fileID=7433441132597879392&amp;guid=4878b0d3b6044f043a1bd7b247a3ec5a&amp;type=3#BallStyle" />
+    <ui:VisualElement name="PhysicsSection" class="section" style="flex-grow: 1; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px;">
+        <ui:VisualElement name="Vars" style="flex-grow: 1;">
+            <ui:Label tabindex="-1" text="Ball Physics" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="font-size: 14px; -unity-font-style: bold; align-self: auto; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-shadow: 10px 10px 3px rgba(0, 0, 0, 0); -unity-text-align: upper-center; background-color: rgb(0, 33, 60);" />
+            <ui:SliderInt label="Projectile Force" high-value="70" name="ProjectileForceSlider" binding-path="projectileForce" low-value="30" show-input-field="true" focusable="true" tabindex="0" style="width: auto; justify-content: flex-start;" />
+            <uie:PropertyField binding-path="throwThreshold" name="ThrowThreshold" label="Throw Time Threshold" />
+            <uie:PropertyField binding-path="startingVelocity" name="StartingVelocity" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Buttons" style="flex-grow: 1;">
+            <ui:Button text="Randomize Velocity" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RandomizeBtn" class="button" style="transition-duration: 0.15s; height: auto; -unity-text-outline-color: rgba(255, 255, 255, 0); -unity-text-outline-width: 0; align-self: flex-end; width: 125px;" />
+            <ui:Button text="Set to Default" parse-escape-sequences="true" display-tooltip-when-elided="true" name="DefaultBtn" class="button" style="transition-duration: 0.15s; height: auto; -unity-text-outline-color: rgba(255, 255, 255, 0); -unity-text-outline-width: 0; align-self: flex-end; width: 125px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="AnimationSection" class="section" style="flex-grow: 1; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; flex-direction: column;">
+        <ui:VisualElement name="Vars" style="flex-grow: 1; flex-direction: column;">
+            <ui:Label tabindex="-1" text="Ball Animation" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 14px; -unity-font-style: bold; align-self: auto; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; text-shadow: 10px 10px 3px rgba(0, 0, 0, 0); -unity-text-align: upper-center; background-color: rgb(36, 15, 52);" />
+            <ui:VisualElement name="SquashSection" style="flex-grow: 1; flex-direction: row; justify-content: flex-start;">
+                <uie:PropertyField binding-path="squashScale" name="Squash" style="width: 100%; height: auto;" />
+                <ui:Button text="Show Ball" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SquashBtn" class="button" style="align-self: flex-end; align-items: flex-end; flex-direction: row; justify-content: flex-end; width: 125px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="StretchSection" style="flex-grow: 1; flex-direction: row; justify-content: flex-start;">
+                <uie:PropertyField binding-path="stretchScale" name="Stretch" style="width: 100%;" />
+                <ui:Button text="Show Ball" parse-escape-sequences="true" display-tooltip-when-elided="true" name="StretchBtn" class="button" style="transition-duration: 0.15s; height: auto; -unity-text-outline-color: rgba(255, 255, 255, 0); -unity-text-outline-width: 0; align-self: flex-end; width: 125px; align-items: flex-end; flex-direction: row; justify-content: flex-end; transition-property: all;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
